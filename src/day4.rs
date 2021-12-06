@@ -17,7 +17,6 @@ pub fn day4(input_lines: &[String]) -> (String, String) {
     for (guard_id, guard) in guards.iter() {
         for minute in 0..60 {
             if guard.asleep_count[minute] > record.asleep_count {
-                println!("New record, guard ID {} asleep {} times in minute {}", guard_id, guard.asleep_count[minute], minute);
                 record = Record {
                     guard_id: *guard_id,
                     minute,
